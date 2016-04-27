@@ -23,7 +23,7 @@
                         <a class="pure-button" href="/">主页</a>
                     </li>
                     <li class="nav-item">
-                        <a class="pure-button" href="/">归档</a>
+                        <a class="pure-button" href="{% url "archives" %}">归档</a>
                     </li>
                     <li class="nav-item">
                         <a class="pure-button" href="https://github.com/YXY2829">Github</a>
@@ -34,8 +34,16 @@
                     <li class="nav-item">
                         <a class="button-success pure-button" href="/">专题</a>
                     </li>
+                    <li>
+                    <form class="pure-form" action="/search/" method="get">
+                    <input class="pure-input-3-3" type="text" name="s" placeholder="search">
+                    </form>
+                    </li>
                     <li class="nav-item">
-                        <a class="button-success pure-button" href="/">About Me</a>
+                        <a class="button-success pure-button" href="{% url "about_me" %}">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="button-success pure-button" href="{% url "RSS" %}">RSS</a>
                     </li>
                 </ul>
             </nav>
@@ -49,8 +57,8 @@
             <div class="footer">
                 <div class="pure-menu pure-menu-horizontal pure-menu-open">
                     <ul>
-                        <li><a href="http://andrewliu.tk/about/">About Me</a></li>
-                        <li><a href="http://twitter.com/yuilibrary/">Twitter</a></li>
+                        <li><a href="http://127.0.0.1:8000/aboutme">About Me</a></li>
+                        <li><a href="/">Twitter</a></li>
                         <li><a href="http://github.com/yahoo/pure/">GitHub</a></li>
                     </ul>
                 </div>
